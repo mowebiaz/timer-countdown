@@ -1,4 +1,8 @@
-# React + Vite
+# Countdown timer
+To modify the event date (eventDate), navigate to the App.jsx file and modify the constant `targetDate`
+
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
