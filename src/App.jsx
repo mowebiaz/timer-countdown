@@ -1,4 +1,4 @@
-import { Timer } from './components/timer/Timer'
+import { Timer } from './components/Timer/Timer'
 
 const targetDate = new Date('2024-12-31T23:59:59').getTime()
 
