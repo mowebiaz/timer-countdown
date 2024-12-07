@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { ConfettiComponent } from '../ConfettiComponent/ConfettiComponent'
 import './Timer.css'
 
 export function Timer({ eventDate }) {
@@ -27,7 +28,7 @@ export function Timer({ eventDate }) {
     const seconds = pad(Math.floor((time / 1000) % 60))
     const minutes = pad(Math.floor((time / (1000 * 60)) % 60))
     const hours = pad(Math.floor((time / (1000 * 60 * 60)) % 24))
-    const days = pad(Math.floor(time / (1000 * 60 * 60 * 24))) 
+    const days = pad(Math.floor(time / (1000 * 60 * 60 * 24)))
     return { days, hours, minutes, seconds }
   }
 
@@ -38,11 +39,7 @@ export function Timer({ eventDate }) {
       </div>
     )
   } else if (timeLeft <= 0) {
-    return (
-      <div className="completed">
-        <p>Le compte à rebours est terminé !</p>
-      </div>
-    )
+    return <ConfettiComponent />
   }
 
   const { days, hours, minutes, seconds } = formatTime(timeLeft)
